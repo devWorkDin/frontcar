@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import "../styles/Grid.css";
 function Grid1({ title, content, image, direction }) {
   const style = {
@@ -17,7 +18,7 @@ function Grid1({ title, content, image, direction }) {
       }
     >
       <div className="grid-item">
-      <img className="imgMobile" src={image} alt="grid" />
+      <img  className="imgMobile" src={image} alt="grid" />
       <div className="overlay_blur_mobile"></div>
 
         <h1>{title}</h1>
@@ -25,7 +26,7 @@ function Grid1({ title, content, image, direction }) {
         <button>Réserver dès maintenant</button>
       </div>
       <div className="grid-image">
-        <img src={image} alt="grid" />
+        <img  src={image} alt="grid" />
         <div className="overlay_blur"></div>
       </div>
     </div>

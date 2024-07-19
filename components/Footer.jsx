@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
   return (
     <>
-    <footer className="mt-20 xl:mt-32 mx-auto w-full relative text-center bg-black text-white" style={{
+    <footer className="pt-20 xl:mt-32 mx-auto w-full relative text-center bg-black text-white" style={{
       backgroundColor: "black",
     }}>
     <div className="px-6 py-8 md:py-14 xl:pt-20 xl:pb-12 bg-black" >

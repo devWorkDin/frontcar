@@ -41,9 +41,9 @@ function Process() {
           />        </div>
         <h2>Service Personnalisé</h2>
         <p>
-          Profitez d'un service personnalisé et de qualité pour tous vos
-          déplacements.
-        </p>
+  Profitez d&apos;un service personnalisé et de qualité pour tous vos
+  déplacements.
+</p>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import Testimonial from "@components/Testimonial";
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-black">
       <HeroSection />
       <Grid1
       direction={'no-reverse'}

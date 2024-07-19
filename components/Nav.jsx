@@ -95,7 +95,7 @@ function Nav() {
           </svg>
         </button>
         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  dark:border-gray-700">
+          <ul className="items-center font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  dark:border-gray-700">
             <li>
               <a
                 href="#accueil"
@@ -131,8 +131,8 @@ function Nav() {
             </li>
             <li>
               <a
-                href="#contactez-moi"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                href="https://api.whatsapp.com/send/?phone=33786740798&text&type=phone_number&app_absent=0"
+                className="flex justify-center align-middle items-center h-11 w-36 rounded-3xl text-black md:p-0 bg-white"
               >
                 Contactez-moi
               </a>

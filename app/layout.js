@@ -8,7 +8,7 @@ const urbanist = Urbanist({ subsets: ["latin"] });
 export const metadata = {
   title: "Bienvenue chez Fastcar - Votre Service de Chauffeur VTC de Luxe",
   description:
-  "Découvrez une expérience de transport inégalée avec Fastcar. Spécialisés dans le service de chauffeur VTC de luxe, nous mettons à votre disposition des véhicules haut de gamme et des chauffeurs professionnels pour tous vos déplacements.",
+  "Découvrez une expérience de transport inégalée avec Fastcar. Spécialisés dans le service de chauffeur VTC, nous mettons à votre disposition un véhicule haut de gamme et un chauffeur professionnel pour tous vos déplacements.",
 };
 
 export default function RootLayout({ children }) {

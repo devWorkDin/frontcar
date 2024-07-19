@@ -58,6 +58,7 @@
 }
 
 @media screen and (max-width: 768px) {
+  
   .container-grid {
     flex-direction: column;
     height: 60vh;
@@ -73,11 +74,13 @@
     display: block;
     position: absolute;
     z-index: -2;
-    left: 0;
     right: 0;
-    height: 100%;
-    width: 100%;
+    right: 0;
+    height: 20rem;
+    width: 20rem;
+    -o-object-fit: fill;
     object-fit: fill;
+    border-radius: 100%;
   }
   .overlay_blur_mobile {
     position: absolute;

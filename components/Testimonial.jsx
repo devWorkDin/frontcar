@@ -29,6 +29,7 @@ function Testimonial() {
               <div
                 style={{
                   borderRadius: "100%",
+                  
                   width: "3rem",
                   height: "3rem",
                   backgroundColor: "white",

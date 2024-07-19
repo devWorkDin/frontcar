@@ -1,5 +1,6 @@
 .grid-process {
     display: flex;
+    background-color: black;
     max-width: 80rem;
     justify-content: space-around;
     height: 50vh;

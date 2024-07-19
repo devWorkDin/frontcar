@@ -1,5 +1,6 @@
 .container-grid {
   display: flex;
+  background-color: black;
   justify-content: space-around;
   height: 80vh;
   align-items: center;
@@ -7,10 +8,13 @@
 .grid-item {
 }
 .grid-item > h1 {
+  color: white;
   font-size: 44px;
   font-weight: 600;
 }
 .grid-item > p {
+  color: white;
+
   font-size: 24px;
   max-width: 25rem;
 }

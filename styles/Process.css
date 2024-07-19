@@ -58,7 +58,7 @@
 @media screen and (max-width:768px){
     .grid-process {
         overflow-y: hidden;
-        scroll-snap-type: mandatory;
+        justify-content: start;
         overflow-x: scroll;
         width: 90%;
         height: auto;

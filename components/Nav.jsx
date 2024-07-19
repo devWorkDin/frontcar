@@ -127,51 +127,53 @@ function Nav() {
       </div>
       <div style={styleMenu} className="navmenu">
         <ul>
-          <li>
-            <a
-              onClick={() => {
+          <li  onClick={() => {
                 setMenu(!menu);
-              }}
+              }}>
+            <a
+             
               href="#accueil"
             >
               Accueil
             </a>
           </li>
-          <li>
-            <a
-              onClick={() => {
+          <li onClick={() => {
                 setMenu(!menu);
-              }}
+              }}>
+            <a
               href="#services"
             >
               Services
             </a>
           </li>
-          <li>
-            <a
-              onClick={() => {
+          <li  onClick={() => {
                 setMenu(!menu);
-              }}
+              }}>
+            <a
+             
               href="#procedure"
             >
               Procédure
             </a>
           </li>
-          <li>
-            <a
-              onClick={() => {
-                setMenu(!menu);
-              }}
+          <li
+          onClick={() => {
+            setMenu(!menu);
+          }}>
+            <a 
+              
               href="#temoignage"
             >
               Témoignage
             </a>
           </li>
-          <li>
+          <li
+          
+          onClick={() => {
+            setMenu(!menu);
+          }}>
             <a
-              onClick={() => {
-                setMenu(!menu);
-              }}
+              
               href="#contactez-moi"
             >
               Contacez-moi

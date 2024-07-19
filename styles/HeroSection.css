@@ -1,26 +1,29 @@
 .heroSection {
   height: 100vh;
-  background-image: url('../public/assets/background_banniere.jpg');
-  background-size: cover;
-  background-position: center;
+  background-image: url("../public/assets/background_banniere.jpg");
+  background-size: 79%;
+  background-position: bottom;
   flex-direction: column;
   display: flex;
+  background-repeat: no-repeat no-repeat;
   justify-content: center;
   align-items: center;
 }
-.heroSection > h1 {
+
+
+.title {
   font-size: 3rem;
   font-weight: 700;
   color: #fff;
   margin-bottom: 1rem;
 }
-
-.heroSection > p {
+.paragraph {
   width: 20rem;
   font-size: 1.2rem;
   color: #ffffffb2;
   text-align: center;
 }
+
 .button {
   margin-top: 3rem;
   padding: 15px 40px;
@@ -34,15 +37,14 @@
   background: white;
 }
 
-
-@media screen and (max-width:768px){
-  .heroSection > h1 {
+@media screen and (max-width: 768px) {
+  .title {
     text-align: center;
     font-size: 2.2rem;
   }
   .heroSection {
     height: 60vh;
-    background-image: url('../public/assets/background_banniere.jpg');
+    background-image: url("../public/assets/background_banniere.jpg");
     background-size: 90%;
     background-color: #000000;
     background-repeat: no-repeat;

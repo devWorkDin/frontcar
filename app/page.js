@@ -1,6 +1,13 @@
+
+
+"use client"
 import Grid1 from "@components/Grid1";
 import HeroSection from "@components/HeroSection";
 import Process from "@components/Process";
+import { Zoom, Slide, Bounce } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
+
+
 import Testimonial from "@components/Testimonial";
 
 export default function Home() {
@@ -8,7 +15,13 @@ export default function Home() {
     <main style={{
       backgroundColor: "black",
     }}>
+
+<Zoom>
+
       <HeroSection />
+      </Zoom>
+
+
       <Grid1
       direction={'no-reverse'}
         title={"Confort et Luxe à Bord"}

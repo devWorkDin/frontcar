@@ -19,7 +19,7 @@ function Testimonial() {
               />
             </svg>
             <blockquote>
-              <p class="text-2xl font-medium text-gray-900 dark:text-white">
+              <p class="text-2xl font-medium text-white">
                 Mourad a fourni un service de chauffeur de luxe
                 remarquable. La voiture était propre et confortable, et sa
                 conduite était douce et professionnelle.
@@ -29,15 +29,15 @@ function Testimonial() {
               <div
                 style={{
                   borderRadius: "100%",
-                  
+
                   width: "3rem",
                   height: "3rem",
                   backgroundColor: "white",
                   boxShadow: "0 0 0 4px #000",
                 }}
               ></div>
-              <div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                <div class="pr-3 font-medium text-gray-900 dark:text-white">
+              <div class="flex items-center divide-x-2 divide-gray-500">
+                <div class="pr-3 font-medium text-white">
                   Micheal Gough
                 </div>
               </div>

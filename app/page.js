@@ -1,9 +1,7 @@
-import Footer from "@components/Footer";
 import Grid1 from "@components/Grid1";
 import HeroSection from "@components/HeroSection";
 import Process from "@components/Process";
 import Testimonial from "@components/Testimonial";
-import Image from "next/image";
 
 export default function Home() {
   return (

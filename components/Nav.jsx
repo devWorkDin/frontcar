@@ -18,8 +18,8 @@ function Nav() {
     background: " rgb(0, 0, 0)",
   });
 
-  const hideMenu =() =>{
-    setMenu(false)
+  const hideMenu = () => {
+    setMenu(false);
     setStyleMenu({
       opacity: 0,
       visibility: "hidden",
@@ -31,7 +31,7 @@ function Nav() {
       height: "20rem",
       background: " rgb(0, 0, 0)",
     });
-  }
+  };
 
   return (
     <nav className="bg-black border-gray-200 fixed w-[100%] z-40 top-0 left-0 right-0">
@@ -144,8 +144,7 @@ function Nav() {
         <ul>
           <li
             onClick={() => {
-            
-           hideMenu();
+              hideMenu();
             }}
           >
             <a href="#accueil">Accueil</a>
@@ -173,10 +172,12 @@ function Nav() {
           </li>
           <li
             onClick={() => {
-              hideMenu();
+              hideMenu()
             }}
           >
-            <a href="#contactez-moi">Contacez-moi</a>
+            <a href="https://api.whatsapp.com/send/?phone=33786740798&text&type=phone_number&app_absent=0">
+              Contacez-moi
+            </a>
           </li>
         </ul>
       </div>

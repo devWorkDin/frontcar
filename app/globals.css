@@ -36,9 +36,8 @@
 6. Use the user's configured `sans` font-variation-settings by default.
 7. Disable tap highlights on iOS
 */
-html::-webkit-scrollbar{
+html::-webkit-scrollbar, body::-webkit-scrollbar{
   display: none;
-
 }
 html{
   background-color: black;

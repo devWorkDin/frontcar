@@ -15,7 +15,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body className={urbanist.className}>
+      <body className={urbanist.className}  style={{
+        backgroundColor: "black",
+      }}>
         <Nav/>
         {children}
         <Footer/>

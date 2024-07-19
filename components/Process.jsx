@@ -4,8 +4,9 @@ import "../styles/Process.css";
 import { Bounce } from "react-awesome-reveal";
 function Process() {
   return (
+    <Bounce>
+
     <div className="grid-process" id='procedure'>
-      <Bounce>
         <div className="grid-process-item">
           <div className="frame first">
             <Image
@@ -18,8 +19,6 @@ function Process() {
           <h2>Réserver sur WhatsApp</h2>
           <p>Contactez nous via WhatsApp afin de programmer votre trajet</p>
         </div>
-      </Bounce>
-      <Bounce>
         <div className="grid-process-item second">
           <div className="frame second">
             <Image
@@ -35,8 +34,6 @@ function Process() {
             les détails de votre trajet.
           </p>
         </div>
-      </Bounce>
-      <Bounce>
       <div className="grid-process-item third">
         <div className="frame last">
           <Image
@@ -52,9 +49,9 @@ function Process() {
           déplacements.
         </p>
       </div>
-      </Bounce >
 
     </div>
+    </Bounce>
   );
 }
 

@@ -29,7 +29,7 @@ function Process() {
           </div>
           <h2>Confirmation Instantanée</h2>
           <p>
-            Recevez une confirmation de votre réservation par email avec tous
+            Recevez une confirmation de votre réservation avec tous
             les détails de votre trajet.
           </p>
         </div>

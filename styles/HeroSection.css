@@ -44,6 +44,7 @@
     height: 60vh;
     background-image: url('../public/assets/background_banniere.jpg');
     background-size: 90%;
+    background-color: #000000;
     background-repeat: no-repeat;
     background-position: bottom center;
     flex-direction: column;

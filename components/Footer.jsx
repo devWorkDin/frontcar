@@ -4,7 +4,7 @@ function Footer() {
   return (
     <>
     <footer class="mt-20 xl:mt-32 mx-auto w-full relative text-center bg-black text-white">
-    <div class="px-6 py-8 md:py-14 xl:pt-20 xl:pb-12">
+    <div class="px-6 py-8 md:py-14 xl:pt-20 xl:pb-12 bg-black" >
         <h2 class="font-bold text-3xl xl:text-4xl leading-snug">
           Ne perdez plus votre temps?<br/> <span>Commandez votre chauffeur dès maintenant!</span>
         </h2>

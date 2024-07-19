@@ -43,6 +43,7 @@ function Footer() {
                 <a href="#contactez-moi">Contactez-moi</a>
               </div>
             </nav>
+            <hr className="border-gray-600 my-8" />
             <p className="paiement-texte">
               Paiement par carte disponible
               <img

@@ -1,6 +1,24 @@
 .logoPng {
   width: 6rem;
 }
+.fixed-hellobar>img {
+  width: 3rem;
+  margin-left: 1rem;
+}
+.fixed-hellobar{
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: black;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgb(255, 255, 255);
+  height: 2.75rem;
+}
+
 
 /* .navmenu {
   opacity: 1;
@@ -41,4 +59,16 @@
   height: 100%;
   margin-left: 2rem;
   list-style: none;
+}
+
+
+
+@media screen and (max-width:768px){
+  .fixed-hellobar>img {
+    width: 2.5rem;
+    margin-left: .5rem;
+  }
+  .fixed-hellobar{
+    font-size: .8rem;
+  }
 }

@@ -1,0 +1,20 @@
+.paiement-texte{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.paiement-texte>img{
+    padding: .5rem;
+    width: 3rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+    margin-left: 1rem;
+}

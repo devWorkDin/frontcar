@@ -5,6 +5,7 @@ import "../styles/Nav.css";
 
 function Nav() {
   const [menu, setMenu] = useState(false);
+  
 
   const [styleMenu, setStyleMenu] = useState({
     opacity: 0,
@@ -34,7 +35,18 @@ function Nav() {
   };
 
   return (
-    <nav className="bg-black border-gray-200 fixed w-[100%] z-40 top-0 left-0 right-0">
+    <>
+    
+    <p className="fixed-hellobar">
+      Paiement par carte disponible
+ <img src="./assets/svg/visa-svgrepo-com.svg" alt="icone apple pay svg"/>
+ <img src='./assets/svg/apple-pay-svgrepo-com.svg' alt="icone apple pay svg"/>
+ <img src='./assets/svg/google-pay-svgrepo-com.svg' alt="icone apple pay svg"/>
+     
+
+
+    </p>
+    <nav className="bg-black border-gray-200 fixed w-[100%] z-40 top-10 left-0 right-0">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
           href="https://flowbite.com/"
@@ -77,7 +89,6 @@ function Nav() {
           aria-controls="navbar-default"
           aria-expanded="false"
         >
-          <span className="sr-only">Open main menu</span>
           <svg
             className="w-5 h-5"
             aria-hidden="true"
@@ -182,6 +193,8 @@ function Nav() {
         </ul>
       </div>
     </nav>
+    </>
+
   );
 }
 

@@ -43,6 +43,14 @@ export default function Home() {
         }
         image={"/assets/2.jpg"}
       />
+       <Grid1
+        direction={"reverse"}
+        title={"Paiement par carte disponible"}
+        content={
+          "Profitez d'un transport pour vos occasions spéciales sans souci avec la possibilité de payer en espèces ou par carte, selon vos préférences."
+        }
+        image={"/assets/4.jpg"}
+      />
       <Process />
       <Testimonial />
     </main>

@@ -1,6 +1,7 @@
 .heroSection {
   height: 100vh;
   gap: 1rem;
+  margin-top: -7rem;
   background-image: url("../public/assets/background_banniere.jpg");
   background-size: 59rem;
   background-position: bottom;
@@ -105,6 +106,7 @@
     font-size: 2.2rem;
   }
   .heroSection {
+    margin-top: 3rem;
     height: 60vh;
     background-image: url("../public/assets/background_banniere.jpg");
     background-size: 90%;

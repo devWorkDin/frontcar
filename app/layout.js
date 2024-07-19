@@ -1,7 +1,11 @@
 import { Inter } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import "./globals.css";
+import Footer from "@components/Footer";
+import Nav from "@components/Nav";
 
 const inter = Inter({ subsets: ["latin"] });
+const urbanist = Urbanist({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -10,11 +14,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-    <head>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-      <body className={inter.className}>{children}</body>
+    <html lang="fr">
+      <body className={urbanist.className}>
+        <Nav/>
+        {children}
+        <Footer/>
+
+        
+        </body>
     </html>
   );
 }

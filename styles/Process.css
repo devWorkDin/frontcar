@@ -1,70 +1,95 @@
 .grid-process {
-    display: flex;
-    background-color: black;
-    max-width: 80rem;
-    justify-content: space-around;
-    height: 50vh;
-    margin: 5rem auto;
+  display: flex;
+  background-color: black;
+  max-width: 80rem;
+  justify-content: space-around;
+  height: 50vh;
+  margin: 5rem auto;
 }
 
 .grid-process-item {
-    display: block;
-    width: 20rem;
+  display: block;
+  width: 20rem;
 }
-.grid-process-item>.frame>img {
-   width: 4rem;
-    object-fit: cover;
+.grid-process-item > .frame > img {
+  width: 4rem;
+  object-fit: cover;
 }
-.grid-process-item>.frame {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 17rem;
-    border-radius: 2rem;
+.grid-process-item > .frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 17rem;
+  border-radius: 2rem;
 }
 
 .first {
-    background: linear-gradient(180deg,
-            rgba(42, 99, 62, 0.32) 0%,
-            rgb(0, 0, 0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(42, 99, 62, 0.32) 0%,
+    rgb(0, 0, 0) 100%
+  );
 }
 
-.grid-process-item>.second {
-    background: linear-gradient(180deg, #748895 0%, rgb(0, 0, 0) 100%);
+.grid-process-item > .second {
+  background: linear-gradient(180deg, #748895 0%, rgb(0, 0, 0) 100%);
 }
 
-.grid-process-item>.last {
-    background: linear-gradient(180deg, rgba(130, 86, 86, 0.32) 0%, rgb(0, 0, 0) 100%);
+.grid-process-item > .last {
+  background: linear-gradient(
+    180deg,
+    rgba(130, 86, 86, 0.32) 0%,
+    rgb(0, 0, 0) 100%
+  );
 }
 
-.grid-process-item>h2 {
-    padding-left: .5rem;
+.grid-process-item > h2 {
+  padding-left: 0.5rem;
 
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 3rem;
+}
+
+.grid-process-item > p {
+  padding-left: 0.5rem;
+  color: #fafafaa8;
+}
+
+@media screen and (max-width: 768px) {
+  .buttonPrev {
+    z-index: 111;
+    position: absolute;
+    top: 50%;
+    left: 1rem;
     display: block;
-    font-size: 20px;
-    font-weight: 600;
-    margin-top: 3rem;
-}
-
-.grid-process-item>p {
-    padding-left: .5rem;
-    color: #fafafaa8;
-}
-
-
-
-
-
-@media screen and (max-width:768px){
-    .grid-process {
-        overflow-y: hidden;
-        justify-content: start;
-        overflow-x: scroll;
-        width: 90%;
-        height: auto;
-        gap: 2rem;
-    }
-    .grid-process-item {
-        min-width: 20rem;
-    }
+    padding: 2rem;
+    border-radius: 100%;
+    background-color: black;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  }
+  .buttonNext {
+    position: absolute;
+    z-index: 111;
+    top: 50%;
+    right: 1rem;
+    display: block;
+    padding: 2rem;
+    background-color: black;
+    border-radius: 100%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  }
+  .grid-process {
+    padding: 1rem;
+    overflow-y: hidden;
+    justify-content: start;
+    overflow-x: scroll;
+    max-width: 78rem;
+    height: auto;
+    gap: 2rem;
+  }
+  .grid-process-item {
+    min-width: 20rem;
+  }
 }

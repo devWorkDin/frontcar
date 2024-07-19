@@ -5,8 +5,7 @@ import { Bounce } from "react-awesome-reveal";
 function Process() {
   return (
     <Bounce>
-
-    <div className="grid-process" id='procedure'>
+      <div className="grid-process" id="procedure">
         <div className="grid-process-item">
           <div className="frame first">
             <Image
@@ -34,23 +33,22 @@ function Process() {
             les détails de votre trajet.
           </p>
         </div>
-      <div className="grid-process-item third">
-        <div className="frame last">
-          <Image
-            src="./assets/svg/user-focus.svg"
-            alt="whatsapp"
-            width={32}
-            height={32}
-          />
+        <div className="grid-process-item third">
+          <div className="frame last">
+            <Image
+              src="./assets/svg/user-focus.svg"
+              alt="whatsapp"
+              width={32}
+              height={32}
+            />
+          </div>
+          <h2>Service Personnalisé</h2>
+          <p>
+            Profitez d&apos;un service personnalisé et de qualité pour tous vos
+            déplacements.
+          </p>
         </div>
-        <h2>Service Personnalisé</h2>
-        <p>
-          Profitez d&apos;un service personnalisé et de qualité pour tous vos
-          déplacements.
-        </p>
       </div>
-
-    </div>
     </Bounce>
   );
 }

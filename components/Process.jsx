@@ -4,7 +4,7 @@ import "../styles/Process.css";
 import { Bounce } from "react-awesome-reveal";
 function Process() {
   return (
-    <div className="grid-process">
+    <div className="grid-process" id='procedure'>
       <Bounce>
         <div className="grid-process-item">
           <div className="frame first">
@@ -44,7 +44,7 @@ function Process() {
             alt="whatsapp"
             width={32}
             height={32}
-          />{" "}
+          />
         </div>
         <h2>Service Personnalisé</h2>
         <p>

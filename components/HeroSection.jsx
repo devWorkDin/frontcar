@@ -4,7 +4,7 @@ import { Zoom, Slide, Bounce } from "react-awesome-reveal";
 
 function HeroSection() {
   return (
-    <section className="heroSection">
+    <section className="heroSection" id="accueil">
       <Zoom>
         <h1 className="title">Des trajets de luxe pour vos événements</h1>
         <p className="paragraph">
@@ -13,7 +13,7 @@ function HeroSection() {
         </p>
       </Zoom>
 
-      <button className="button">Réservez dès maintenant</button>
+      <a className="button" href="https://api.whatsapp.com/send/?phone=33786740798&text&type=phone_number&app_absent=0">Réservez dès maintenant</a>
     </section>
   );
 }

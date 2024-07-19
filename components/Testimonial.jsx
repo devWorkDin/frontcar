@@ -1,6 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import { Zoom } from "react-awesome-reveal";
+import Image from "next/image";
 
 
 
@@ -9,7 +9,7 @@ function Testimonial() {
     <>
     <Zoom>
 
-      <section class="bg-black mt">
+      <section class="bg-black mt" id='temoignage'>
         <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
           <figure class="max-w-screen-md mx-auto">
             <svg
@@ -34,16 +34,26 @@ function Testimonial() {
               <div
                 style={{
                   borderRadius: "100%",
-
+                  justifyContent: "center",
+                  display: "flex",
+                  alignItems: "center",
                   width: "3rem",
                   height: "3rem",
                   backgroundColor: "white",
                   boxShadow: "0 0 0 4px #000",
                 }}
-              ></div>
+              >
+               <Image
+               src={'./assets/svg/steering-wheel.svg'}
+               alt="temoignage"
+               width={32}
+               height={32}
+               />
+              
+              </div>
               <div class="flex items-center divide-x-2 divide-gray-500">
                 <div class="pr-3 font-medium text-white">
-                  Micheal Gough
+                  Anonyme
                 </div>
               </div>
             </figcaption>

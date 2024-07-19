@@ -19,7 +19,7 @@ function Nav() {
   });
 
   return (
-    <nav className="bg-black border-gray-200 fixed w-[100%] z-40">
+    <nav className="bg-black border-gray-200 fixed w-[100%] z-40 top-0 left-0 right-0">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
           href="https://flowbite.com/"
@@ -32,7 +32,8 @@ function Nav() {
           onClick={() => {
             setMenu(!menu);
             if (menu) {
-              setStyleMenu({ opacity: 0,
+              setStyleMenu({
+                opacity: 0,
                 visibility: "hidden",
                 transition: "all 0.3s ease-in-out",
                 position: "fixed",
@@ -40,9 +41,10 @@ function Nav() {
                 width: "100%",
                 zIndex: 10,
                 height: "20rem",
-                background: " rgb(0, 0, 0)",});
+                background: " rgb(0, 0, 0)",
+              });
             } else {
-              setStyleMenu({ 
+              setStyleMenu({
                 opacity: 1,
                 visibility: "visible",
                 transition: "all 0.3s ease-in-out",
@@ -52,7 +54,7 @@ function Nav() {
                 zIndex: 10,
                 height: "25rem",
                 background: " rgb(0, 0, 0)",
-               });
+              });
             }
           }}
           type="button"
@@ -81,7 +83,7 @@ function Nav() {
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  dark:border-gray-700">
             <li>
               <a
-                href="#"
+                href="#accueil"
                 className="block py-2 px-3 text-white rounded md:bg-transparent  md:p-0 dark:text-white"
                 aria-current="page"
               >
@@ -90,7 +92,7 @@ function Nav() {
             </li>
             <li>
               <a
-                href="#"
+                href="#services"
                 className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Services
@@ -98,16 +100,23 @@ function Nav() {
             </li>
             <li>
               <a
-                href="#"
+                href="#procedure"
                 className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                Procédures
+                Procédure
               </a>
             </li>
-         
             <li>
               <a
-                href="#"
+                href="#temoignage"
+                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >
+                Témoignage
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contactez-moi"
                 className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Contactez-moi
@@ -119,19 +128,19 @@ function Nav() {
       <div style={styleMenu} className="navmenu">
         <ul>
           <li>
-            <a href="">Accueil</a>
+            <a href="#accueil">Accueil</a>
           </li>
           <li>
-            <a href="">Services</a>
+            <a href="#services">Services</a>
           </li>
           <li>
-            <a href="">Procédure</a>
+            <a href="#procedure">Procédure</a>
           </li>
           <li>
-            <a href="">Témoignage</a>
+            <a href="#temoignage">Témoignage</a>
           </li>
           <li>
-            <a href="">Contacez-nous</a>
+            <a href="#contactez-moi">Contacez-moi</a>
           </li>
         </ul>
       </div>

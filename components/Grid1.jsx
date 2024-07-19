@@ -11,6 +11,7 @@ function Grid1({ title, content, image, direction }) {
   };
   return (
     <div
+      id="services"
       className="container-grid"
       style={
         direction === "reverse"
@@ -25,7 +26,7 @@ function Grid1({ title, content, image, direction }) {
 
           <h1>{title}</h1>
           <p>{content}</p>
-          <button>Réserver dès maintenant</button>
+          <a href='https://api.whatsapp.com/send/?phone=33786740798&text&type=phone_number&app_absent=0'>Réserver dès maintenant</a>
         </div>
         <div className="grid-image">
           <img src={image} alt="grid" />

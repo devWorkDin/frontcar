@@ -18,6 +18,21 @@ function Nav() {
     background: " rgb(0, 0, 0)",
   });
 
+  const hideMenu =() =>{
+    setMenu(false)
+    setStyleMenu({
+      opacity: 0,
+      visibility: "hidden",
+      transition: "all 0.3s ease-in-out",
+      position: "fixed",
+      top: "-19rem",
+      width: "100%",
+      zIndex: 10,
+      height: "20rem",
+      background: " rgb(0, 0, 0)",
+    });
+  }
+
   return (
     <nav className="bg-black border-gray-200 fixed w-[100%] z-40 top-0 left-0 right-0">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -127,57 +142,41 @@ function Nav() {
       </div>
       <div style={styleMenu} className="navmenu">
         <ul>
-          <li  onClick={() => {
-                setMenu(!menu);
-              }}>
-            <a
-             
-              href="#accueil"
-            >
-              Accueil
-            </a>
-          </li>
-          <li onClick={() => {
-                setMenu(!menu);
-              }}>
-            <a
-              href="#services"
-            >
-              Services
-            </a>
-          </li>
-          <li  onClick={() => {
-                setMenu(!menu);
-              }}>
-            <a
-             
-              href="#procedure"
-            >
-              Procédure
-            </a>
+          <li
+            onClick={() => {
+            
+           hideMenu();
+            }}
+          >
+            <a href="#accueil">Accueil</a>
           </li>
           <li
-          onClick={() => {
-            setMenu(!menu);
-          }}>
-            <a 
-              
-              href="#temoignage"
-            >
-              Témoignage
-            </a>
+            onClick={() => {
+              hideMenu();
+            }}
+          >
+            <a href="#services">Services</a>
           </li>
           <li
-          
-          onClick={() => {
-            setMenu(!menu);
-          }}>
-            <a
-              
-              href="#contactez-moi"
-            >
-              Contacez-moi
-            </a>
+            onClick={() => {
+              hideMenu();
+            }}
+          >
+            <a href="#procedure">Procédure</a>
+          </li>
+          <li
+            onClick={() => {
+              hideMenu();
+            }}
+          >
+            <a href="#temoignage">Témoignage</a>
+          </li>
+          <li
+            onClick={() => {
+              hideMenu();
+            }}
+          >
+            <a href="#contactez-moi">Contacez-moi</a>
           </li>
         </ul>
       </div>

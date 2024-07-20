@@ -1,5 +1,6 @@
 .heroSection {
   height: 100vh;
+  position: relative;
   gap: 1rem;
   margin-top: -7rem;
   background-image: url("../public/assets/background_banniere.jpg");
@@ -33,8 +34,6 @@
   display: flex;
   
   bottom: 0;
-
-
   opacity: 1;
   height: 50px;
   border: none;
@@ -42,7 +41,7 @@
   color: #fff;
   background: #111;
   cursor: pointer;
-  position: absolute;
+  position: absolute !important;
   z-index: 10;
   border-radius: 4rem;
 }
@@ -112,6 +111,7 @@
     font-size: 2.2rem;
   }
   .heroSection {
+    position: relative;
     margin-top: 3rem;
     height: 60vh;
     background-image: url("../public/assets/background_banniere.jpg");

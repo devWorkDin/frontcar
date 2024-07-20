@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <link rel="icon" type="image/png" href="/faviconFC.png" />
+      <link rel="icon"  type="image/png" href="/assets/faviconFC.png" />
       <body
         className={urbanist.className}
         style={{

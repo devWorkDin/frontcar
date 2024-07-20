@@ -31,6 +31,9 @@
   justify-content: center;
   align-items: center;
   display: flex;
+  
+  bottom: 0;
+
 
   opacity: 1;
   height: 50px;
@@ -39,8 +42,8 @@
   color: #fff;
   background: #111;
   cursor: pointer;
-  position: relative;
-  z-index: 0;
+  position: absolute;
+  z-index: 10;
   border-radius: 4rem;
 }
 
@@ -101,6 +104,9 @@
 } */
 
 @media screen and (max-width: 768px) {
+  .button{
+    bottom: -3rem;
+  }
   .title {
     text-align: center;
     font-size: 2.2rem;

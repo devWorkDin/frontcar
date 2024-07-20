@@ -63,7 +63,8 @@
   
   .container-grid {
     flex-direction: column;
-    height: 60vh;
+    height: auto;
+    margin-top: 6rem;
   }
   .grid-image {
     display: none;

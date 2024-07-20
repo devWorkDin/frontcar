@@ -59,7 +59,7 @@ function Footer() {
                 alt="icone apple pay svg"
               />
             </p>
-            <p className="mt-7 text-base">©2024 ODigital</p>
+            <a href='https://api.whatsapp.com/send?phone=601135620545&text=Bonjour%20%2C%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20vos%20services%20%F0%9F%98%8A' className="mt-7 text-base">©2024 ODigital</a>
           </div>
         </div>
       </footer>

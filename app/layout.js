@@ -5,6 +5,7 @@ import Nav from "@components/Nav";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
+
 export const metadata = {
   title: "Bienvenue chez Fastcar - Votre Service de Chauffeur VTC de Luxe",
   description:

@@ -49,7 +49,7 @@ function Nav() {
     <nav className="bg-black border-gray-200 fixed w-[100%] z-40 top-10 left-0 right-0">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
-          href="https://flowbite.com/"
+          href="#"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <img className="logoPng" src={"/assets/logo/2.png"} alt="logo" />
@@ -76,7 +76,7 @@ function Nav() {
                 visibility: "visible",
                 transition: "all 0.3s ease-in-out",
                 position: "fixed",
-                top: "4rem",
+                top: "6rem",
                 width: "100%",
                 zIndex: 10,
                 height: "25rem",
@@ -85,7 +85,7 @@ function Nav() {
             }
           }}
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden dark:text-gray-400"
           aria-controls="navbar-default"
           aria-expanded="false"
         >

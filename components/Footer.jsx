@@ -14,7 +14,7 @@ function Footer() {
         <div className="px-6 py-8 md:py-14 xl:pt-20 xl:pb-12 bg-black">
           <h2 className="font-bold text-3xl xl:text-4xl leading-snug">
             Ne perdez plus votre temps?
-            <br />{" "}
+            <br />
             <span className="text-xl font-medium">
               Commandez votre chauffeur dès maintenant!
             </span>

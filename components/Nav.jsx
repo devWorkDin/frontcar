@@ -187,7 +187,7 @@ function Nav() {
             }}
           >
             <a href="https://api.whatsapp.com/send/?phone=33786740798&text&type=phone_number&app_absent=0">
-              Contacez-moi
+              Contactez-moi
             </a>
           </li>
         </ul>

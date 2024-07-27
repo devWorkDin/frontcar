@@ -7,8 +7,19 @@ import { useEffect } from "react";
 function ProfilDriver() {
   const [services, setServices] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [ratingAverage, setRatingAverage] = useState(0);
+  const [rating , setRating] = useState(0);
 
   useEffect(() => {
+    fetch("/api/rating")
+      .then((response) => response.json())
+      .then((data) => {
+        setRatingAverage(data.rating);
+      
+      }
+    );
+
+
     setIsLoading(true);
     fetch("/api/service")
       .then((response) => response.json())
@@ -58,7 +69,8 @@ function ProfilDriver() {
         <ul className="profil-driver-list">
           <li>Mourad Meremi</li>
           <li>
-            <StarsRating rating={5} />
+            <StarsRating rating={Math.round(ratingAverage)} />
+             {ratingAverage}/5
           </li>
           {/* <li className="rating">
         <div  className="rating__star star_1"></div>
@@ -71,7 +83,7 @@ function ProfilDriver() {
         </ul>
       </div>
       {isLoading ? (
-        <div>Loading...</div>
+        <div>Chargement...</div>
       ) : (
         <>
           <div>

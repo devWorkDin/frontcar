@@ -94,9 +94,9 @@ transition: all .3s ease-in-out;
     margin-bottom: 0.5rem;
   }
   .content-description{
-    word-wrap: break-word; /* permettre au texte de sauter automatiquement à la ligne */
-  word-break: break-all; /* permettre au texte de sauter automatiquement à la ligne */
-  white-space: normal; /* permettre les sauts de ligne automatiques */
+    word-break:keep-all;
+
+    
   }
 
   @media screen and (max-width:768px){

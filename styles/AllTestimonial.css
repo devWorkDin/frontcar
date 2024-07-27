@@ -29,7 +29,7 @@
 }
 
 .filter-cliquer{
-    max-width: 30rem;
+    max-width: 90%;
     display: flex;
     gap: 1rem;
     margin: 0 auto;
@@ -40,6 +40,7 @@
     margin-top: 2rem;
 }
 .select-filter{
+    text-align: center;
     padding: .5rem 1rem;
     border: 1px solid #000;
     border-radius: 0.5rem;
@@ -52,4 +53,18 @@
     text-align: center;
    font-size: 1.32rem;
    margin-top: 2rem;
+}
+
+@media screen and (max-width:768px){
+    .filter-cliquer{
+        max-width: 90%;
+        display: flex;
+        gap: 1rem;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-top: 2rem;
+    }
 }

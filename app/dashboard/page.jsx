@@ -8,7 +8,7 @@ import "../../styles/Dashboard.css";
 import AllTestimonialDashboard from "../../components/AllTestimonialDashboard";
 import "../../styles/WriteTestimonial.css";
 
-function page() {
+function Page() {
   const [showPassword , setShowPassword] = useState(false);
   const [isConnected, setIsConnected] = useState(false);
   const [password, setPassword] = useState("");
@@ -112,4 +112,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

@@ -4,7 +4,7 @@ import React from "react";
 import "../../styles/AllTestimonial.css";
 import "../../styles/WriteTestimonial.css";
 
-function page() {
+function Page() {
   return (
     <>
       <h1 className="title-page-write-post">
@@ -25,4 +25,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

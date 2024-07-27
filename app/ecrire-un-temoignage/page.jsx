@@ -119,3 +119,5 @@ const [confort , setConfort] = useState(false);
 }
 
 export default Page;
+
+/*¨*/

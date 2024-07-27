@@ -17,7 +17,7 @@ function Page() {
         /> */}
       </h1>
       <h2 className="subtitle-page-write-post">
-        Vous pouvez les consulter et faire vos propres avis
+        Vous pouvez les consulter et faire vos propres avis !
       </h2>
       <ProfilDriver />
       <AllTestimonial />

@@ -4,7 +4,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
 }
 .profil-driver-image {
   background: conic-gradient(
@@ -17,10 +16,10 @@
   height: 100px;
   border-radius: 50%;
   background-color: rgb(255, 255, 255);
-  margin-top: 20px;
 }
 .profil-driver-container {
   gap: 1rem;
+  margin-bottom: 2rem;
   align-items: center;
   display: flex;
   justify-content: center;

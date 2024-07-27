@@ -1,5 +1,5 @@
 import React from "react";
-import "@styles/TestimonialCard.css";
+import '../styles/TestimonialCard.css';
 import StarsRating from "./StarsRating";
 import { Fade } from "react-awesome-reveal";
 function TestimonialCard({ testimonial }) {

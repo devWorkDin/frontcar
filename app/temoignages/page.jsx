@@ -1,5 +1,5 @@
-import AllTestimonial from "@components/AllTestimonial";
-import ProfilDriver from "@components/ProfilDriver";
+import AllTestimonial from "../../components/AllTestimonial";
+import ProfilDriver from "../../components/ProfilDriver";
 import React from "react";
 import "../../styles/AllTestimonial.css";
 import "../../styles/WriteTestimonial.css";

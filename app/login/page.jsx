@@ -1,15 +1,9 @@
-import React from "react";
-import FormLogin from "@components/FormLogin";
-import '../../styles/FormLogin.css'
+import React from 'react'
+
 function page() {
   return (
-    <>
-    <div className="dashboard-section">
-    <FormLogin/>
-    </div>
-    </>
-  
-  );
+    <div>page</div>
+  )
 }
 
-export default page;
+export default page

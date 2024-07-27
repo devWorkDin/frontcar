@@ -1,8 +1,8 @@
 
 "use client";
 import React, { useState } from "react";
-import "@styles/RateWithStars.css";
 
+import '../styles/RateWithStars.css'
 function RateWithStars({ onRatingChange }) {
   const [starsRate, setStarsRate] = useState(4);
   const [switchDefault , setSwitch] = useState(true);

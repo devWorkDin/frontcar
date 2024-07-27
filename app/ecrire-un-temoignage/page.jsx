@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import AllTestimonial from "@components/AllTestimonial";
-import ProfilDriver from "@components/ProfilDriver";
+import AllTestimonial from "../../components/AllTestimonial";
+import ProfilDriver from "../../components/ProfilDriver";
 import "../../styles/WriteTestimonial.css";
 import "../../styles/AllTestimonial.css";
-import FormSubmit from "@components/FormSubmit";
+import FormSubmit from "../../components/FormSubmit";
 
 function Page() {
 const [ponctualite , setPonctualite] = useState(false);

@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
-import { connectToDB } from "@utils/database";
-import Testimonial from "@models/testimonials";
-import Service from "@models/services";
+import { connectToDB } from "../../../utils/database";
+import Testimonial from "../../../models/testimonials";
+import Service from "../../../models/services";
 
 export async function GET(request) {
   await connectToDB();

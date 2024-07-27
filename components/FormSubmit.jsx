@@ -2,8 +2,8 @@
 import React, { use } from "react";
 import { useEffect } from "react";
 import "toastify-js/src/toastify.css"
-import "@styles/RateWithStars.css";
 
+import '../styles/RateWithStars.css'
 import { useState } from "react";
 import "../styles/FormSubmit.css";
 import RateWithStars from "./RateWithStars";

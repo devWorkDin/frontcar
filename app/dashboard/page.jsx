@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import "toastify-js/src/toastify.css";
 import Toastify from "toastify-js";
 import "../../styles/Dashboard.css";
-import AllTestimonialDashboard from "@components/AllTestimonialDashboard";
+import AllTestimonialDashboard from "../../components/AllTestimonialDashboard";
 import "../../styles/WriteTestimonial.css";
 
 function page() {

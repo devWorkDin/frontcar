@@ -3,6 +3,7 @@ import ProfilDriver from "../../components/ProfilDriver";
 import React from "react";
 import "../../styles/AllTestimonial.css";
 import "../../styles/WriteTestimonial.css";
+import Link from "next/link";
 
 function Page() {
   return (
@@ -19,6 +20,10 @@ function Page() {
       <h2 className="subtitle-page-write-post">
         Vous pouvez les consulter et faire vos propres avis !
       </h2>
+      <Link className="button-write" href={"/ecrire-un-temoignage"}>
+        <p>Écrire un témoignage</p>
+        <img className="icone" src="/assets/svg/pencil-simple-line.svg" alt="pencil" />
+      </Link>
       <ProfilDriver />
       <AllTestimonial />
     </>

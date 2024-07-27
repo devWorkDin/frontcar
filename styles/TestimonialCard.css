@@ -98,3 +98,11 @@ transition: all .3s ease-in-out;
   word-break: break-all; /* permettre au texte de sauter automatiquement à la ligne */
   white-space: normal; /* permettre les sauts de ligne automatiques */
   }
+
+  @media screen and (max-width:768px){
+    .card-testimonial:hover{
+      transform: scale(1);
+      transition: all .3s ease-in-out;
+  }
+  
+  }

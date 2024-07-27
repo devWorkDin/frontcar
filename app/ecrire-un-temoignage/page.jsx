@@ -61,16 +61,11 @@ const [confort , setConfort] = useState(false);
   return (
     <>
       <h1 className="title-page-write-post">
-        <img className="icone_left" src="/assets/svg/star.svg" alt="pencil" />
         Qu&apos;avez-vous pensé de votre course ?
-        <img
-          className="icone"
-          src="/assets/svg/pencil-simple-line.svg"
-          alt="pencil"
-        />
+     
       </h1>
       <h2 className="subtitle-page-write-post">
-        Choisissez celles qui définissent le plus votre expérience
+        Choisissez les critères qui définissent le mieux votre expérience
       </h2>
       <section className="section-write-post">
         <div className="profil-driver-container-2-overflow">

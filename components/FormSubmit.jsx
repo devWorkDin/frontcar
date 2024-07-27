@@ -136,7 +136,7 @@ function FormSubmit({
       <span className="span-text-length" style={{
         color:content.length >= 150 ? "red" : "white"
       }}>
-        {content.length}/100
+        {content.length}/150
         </span>
         <p>
         </p>

@@ -62,7 +62,7 @@ const [confort , setConfort] = useState(false);
     <>
       <h1 className="title-page-write-post">
         <img className="icone_left" src="/assets/svg/star.svg" alt="pencil" />
-        Qu'avez vous pensé de votre course
+        Qu&apos;avez-vous pensé de votre course ?
         <img
           className="icone"
           src="/assets/svg/pencil-simple-line.svg"

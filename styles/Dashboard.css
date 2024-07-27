@@ -6,3 +6,14 @@
     font-size: 2rem;
     font-weight: bold;
 }
+
+.logout_button{
+    display: block;
+    background-color: #ffffff;
+    color: rgb(255, 0, 0);
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    border:.1rem solid #ff0000;
+    cursor: pointer;
+}

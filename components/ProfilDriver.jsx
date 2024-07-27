@@ -11,6 +11,8 @@ function ProfilDriver() {
   const [rating , setRating] = useState(0);
 
   useEffect(() => {
+    setIsLoading(true);
+
     fetch("/api/rating")
       .then((response) => response.json())
       .then((data) => {
@@ -20,7 +22,6 @@ function ProfilDriver() {
     );
 
 
-    setIsLoading(true);
     fetch("/api/service")
       .then((response) => response.json())
       .then((data) => {
@@ -69,8 +70,18 @@ function ProfilDriver() {
         <ul className="profil-driver-list">
           <li>Mourad Meremi</li>
           <li>
-            <StarsRating rating={Math.round(ratingAverage)} />
-             {ratingAverage}/5
+            {
+              isLoading ? (
+                <div>Chargement...</div>
+              ) : (
+                <>
+                <StarsRating rating={Math.round(ratingAverage)} />
+                {ratingAverage}/5
+                </>
+
+              )
+            }
+          
           </li>
           {/* <li className="rating">
         <div  className="rating__star star_1"></div>
@@ -86,9 +97,7 @@ function ProfilDriver() {
         <div>Chargement...</div>
       ) : (
         <>
-          <div>
-            <div></div>
-          </div>
+   
           <div className="profil-driver-container-2">
             {sortedQualities.map(([quality, count]) => (
               <div key={quality} className="item-driver-adj">

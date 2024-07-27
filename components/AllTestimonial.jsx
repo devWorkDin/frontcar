@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import React, { useEffect, useState } from "react";
 import TestimonialCard from "./TestimonialCard";
 import Toastify from 'toastify-js';
@@ -8,8 +8,11 @@ function AllTestimonial() {
   const [sortCriteria, setSortCriteria] = useState("date");
   const [loading, setLoading] = useState(true);
   const [testimonials, setTestimonials] = useState([]);
+  const [sortedTestimonials, setSortedTestimonials] = useState([]);
 
   useEffect(() => {
+    setLoading(true);
+
     fetch("/api/testimonial", {
       method: "GET",
       headers: {
@@ -26,6 +29,7 @@ function AllTestimonial() {
             duration: 3000,
             backgroundColor: "red",
           }).showToast();
+          setLoading(false);
           throw new Error('Network response was not ok');
         }
         return response.json();
@@ -33,6 +37,7 @@ function AllTestimonial() {
       .then((data) => {
         setLoading(false);
         setTestimonials(data?.testimonials || []);
+        sortTestimonials(sortCriteria, data?.testimonials || []);
       })
       .catch((error) => {
         setLoading(false);
@@ -40,13 +45,13 @@ function AllTestimonial() {
       });
   }, []);
 
-  const handleSortChange = (e) => {
-    setSortCriteria(e.target.value);
-  };
+  useEffect(() => {
+    sortTestimonials(sortCriteria, testimonials);
+  }, [sortCriteria, testimonials]);
 
-  const getSortedTestimonials = () => {
+  const sortTestimonials = (criteria, testimonials) => {
     let sortedTestimonials = [...testimonials];
-    switch (sortCriteria) {
+    switch (criteria) {
       case "datenew":
         sortedTestimonials.sort((a, b) => new Date(b.date) - new Date(a.date));
         break;
@@ -62,10 +67,12 @@ function AllTestimonial() {
       default:
         break;
     }
-    return sortedTestimonials;
+    setSortedTestimonials(sortedTestimonials);
   };
 
-  const sortedTestimonials = getSortedTestimonials();
+  const handleSortChange = (e) => {
+    setSortCriteria(e.target.value);
+  };
 
   return (
     <>

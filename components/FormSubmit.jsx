@@ -31,7 +31,7 @@ function FormSubmit({
       setIsLoading(false);
       return;
     }
-    if (content.length > 100) {
+    if (content.length > 150) {
       Toastify({
         text: "Votre avis doit faire moins de 100 caractères",
         close: true,
@@ -134,7 +134,7 @@ function FormSubmit({
       
       </textarea>
       <span className="span-text-length" style={{
-        color:content.length >= 100 ? "red" : "white"
+        color:content.length >= 150 ? "red" : "white"
       }}>
         {content.length}/100
         </span>

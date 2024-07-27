@@ -1,0 +1,55 @@
+.section-testimonial{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+.title-page{
+    margin-left: 1rem;
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.subtitle-page{
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.container-testimonial{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+
+.filter-cliquer{
+    max-width: 30rem;
+    display: flex;
+    gap: 1rem;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+.select-filter{
+    padding: .5rem 1rem;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    cursor: pointer;
+}
+.section-title{
+    text-align: center;
+   font-size: 1.32rem;
+   margin-top: 2rem;
+}

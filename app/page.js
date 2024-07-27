@@ -6,8 +6,14 @@ import { Zoom, Slide, Bounce } from "react-awesome-reveal";
 import { Fade } from "react-awesome-reveal";
 
 import Testimonial from "@components/Testimonial";
+import { useEffect } from "react";
+
+
+
 
 export default function Home() {
+
+  
   return (
     <main
       style={{

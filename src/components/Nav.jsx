@@ -141,7 +141,7 @@ function Nav() {
               </li>
               <li>
                 <Link
-                  href={`/${locale}#temoignage`}
+                  href={`/${locale}/temoignages`}
                   className="block py-2 px-3 text-white rounded md:bg-transparent  md:p-0 dark:text-white"
                   aria-current="page"
                 >
@@ -193,7 +193,9 @@ function Nav() {
                   }}
                 >
                   {/* <option value="choose">{b("choose")}</option> */}
-                  <option className="globe-select" value="choose">🌐</option>
+                  <option className="globe-select" value="choose">
+                    🌐
+                  </option>
                   <option value="fr">FR 🇫🇷</option>
                   <option value="en">EN 🇺🇸</option>
                 </select>
@@ -229,7 +231,10 @@ function Nav() {
                 hideMenu();
               }}
             >
-              <Link href={`/${locale}#temoignage`}>{t("testimonial")}</Link>
+              <Link 
+                  href={`/${locale}/temoignages`}
+              
+              >{t("testimonial")}</Link>
             </li>
             <li
               onClick={() => {
@@ -241,44 +246,46 @@ function Nav() {
               </Link>
             </li>
             <li>
-                <select
-                  className="select-lang"
-                  onChange={(e) => {
-                    const newLocale = e.target.value;
+              <select
+                className="select-lang"
+                onChange={(e) => {
+                  const newLocale = e.target.value;
 
-                    if (newLocale === "choose") return;
+                  if (newLocale === "choose") return;
 
-                    const currentPath = window.location.pathname;
+                  const currentPath = window.location.pathname;
 
-                    const pathSegments = currentPath.split("/").filter(Boolean);
+                  const pathSegments = currentPath.split("/").filter(Boolean);
 
-                    // Remplacez le premier segment (locale) si c'est une locale
-                    if (
-                      pathSegments.length > 0 &&
-                      pathSegments[0].match(/^(fr|en)$/)
-                    ) {
-                      pathSegments[0] = newLocale;
-                    } else {
-                      // Sinon, ajoutez la nouvelle locale comme premier segment
-                      pathSegments.unshift(newLocale);
-                    }
+                  // Remplacez le premier segment (locale) si c'est une locale
+                  if (
+                    pathSegments.length > 0 &&
+                    pathSegments[0].match(/^(fr|en)$/)
+                  ) {
+                    pathSegments[0] = newLocale;
+                  } else {
+                    // Sinon, ajoutez la nouvelle locale comme premier segment
+                    pathSegments.unshift(newLocale);
+                  }
 
-                    // Construisez le nouveau chemin
-                    const newPath = "/" + pathSegments.join("/");
+                  // Construisez le nouveau chemin
+                  const newPath = "/" + pathSegments.join("/");
 
-                    // Stockez la locale dans le localStorage
-                    localStorage.setItem("locale", newLocale);
+                  // Stockez la locale dans le localStorage
+                  localStorage.setItem("locale", newLocale);
 
-                    // Redirigez vers la nouvelle URL
-                    window.location.replace(newPath);
-                  }}
-                >
-                  {/* <option value="choose">{b("choose")}</option> */}
-                  <option className="globe-select" value="choose">🌐</option>
-                  <option value="fr">FR 🇫🇷</option>
-                  <option value="en">EN 🇺🇸</option>
-                </select>
-              </li>
+                  // Redirigez vers la nouvelle URL
+                  window.location.replace(newPath);
+                }}
+              >
+                {/* <option value="choose">{b("choose")}</option> */}
+                <option className="globe-select" value="choose">
+                  🌐
+                </option>
+                <option value="fr">FR 🇫🇷</option>
+                <option value="en">EN 🇺🇸</option>
+              </select>
+            </li>
           </ul>
         </div>
       </nav>

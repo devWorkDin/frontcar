@@ -241,46 +241,44 @@ function Nav() {
               </Link>
             </li>
             <li>
-              <select
-                className="select-lang"
-                onChange={(e) => {
-                  const newLocale = e.target.value;
+                <select
+                  className="select-lang"
+                  onChange={(e) => {
+                    const newLocale = e.target.value;
 
-                  // Évitez de changer si la locale choisie est "choose"
-                  if (newLocale === "choose") return;
+                    if (newLocale === "choose") return;
 
-                  // Obtenez le chemin actuel
-                  const currentPath = window.location.pathname;
+                    const currentPath = window.location.pathname;
 
-                  // Décomposez le chemin en segments
-                  const pathSegments = currentPath.split("/").filter(Boolean);
+                    const pathSegments = currentPath.split("/").filter(Boolean);
 
-                  // Remplacez le premier segment (locale) si c'est une locale
-                  if (
-                    pathSegments.length > 0 &&
-                    pathSegments[0].match(/^(fr|en)$/)
-                  ) {
-                    pathSegments[0] = newLocale;
-                  } else {
-                    // Sinon, ajoutez la nouvelle locale comme premier segment
-                    pathSegments.unshift(newLocale);
-                  }
+                    // Remplacez le premier segment (locale) si c'est une locale
+                    if (
+                      pathSegments.length > 0 &&
+                      pathSegments[0].match(/^(fr|en)$/)
+                    ) {
+                      pathSegments[0] = newLocale;
+                    } else {
+                      // Sinon, ajoutez la nouvelle locale comme premier segment
+                      pathSegments.unshift(newLocale);
+                    }
 
-                  // Construisez le nouveau chemin
-                  const newPath = "/" + pathSegments.join("/");
+                    // Construisez le nouveau chemin
+                    const newPath = "/" + pathSegments.join("/");
 
-                  // Stockez la locale dans le localStorage
-                  localStorage.setItem("locale", newLocale);
+                    // Stockez la locale dans le localStorage
+                    localStorage.setItem("locale", newLocale);
 
-                  // Redirigez vers la nouvelle URL
-                  window.location.replace(newPath);
-                }}
-              >
-                <option value="choose">{b("choose")}</option>
-                <option value="fr">FR</option>
-                <option value="en">EN</option>
-              </select>
-            </li>
+                    // Redirigez vers la nouvelle URL
+                    window.location.replace(newPath);
+                  }}
+                >
+                  {/* <option value="choose">{b("choose")}</option> */}
+                  <option className="globe-select" value="choose">🌐</option>
+                  <option value="fr">FR 🇫🇷</option>
+                  <option value="en">EN 🇺🇸</option>
+                </select>
+              </li>
           </ul>
         </div>
       </nav>

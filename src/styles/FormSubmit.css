@@ -9,6 +9,9 @@
   height: auto;
   gap: 0.5rem;
 }
+.form-submit>label{
+  color:white
+}
 .span-text-length {
   display: flex;
   justify-content: flex-end;

@@ -74,6 +74,9 @@
   background-size: cover;
   background-position: center center;
 }
+.profil-driver-list >li{
+  color: white;
+}
 .profil-driver-list {
   width: 10rem;
   display: flex;

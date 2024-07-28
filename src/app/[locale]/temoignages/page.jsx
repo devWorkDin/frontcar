@@ -5,6 +5,7 @@ import React from "react";
 import "../../../styles/AllTestimonial.css";
 import "../../../styles/WriteTestimonial.css";
 import Link from "next/link";
+
 import { useTranslations } from "next-intl";
 
 function Page() {
@@ -12,6 +13,10 @@ function Page() {
   const t = useTranslations("TestimonialPage");
   return (
     <>
+    <section 
+   className="section-testimonial-page"
+    >
+
       <h1 className="title-page-write-post">
         {/* <img className="icone_left" src="/assets/svg/star.svg" alt="pencil" /> */}
         {t("here_are_all_testimonials")}
@@ -32,6 +37,8 @@ function Page() {
       </Link>
       <ProfilDriver />
       <AllTestimonial />
+      </section>
+
     </>
   );
 }

@@ -20,6 +20,12 @@
     "see_all_testimonials": "See All Testimonials",
     "testimonial_example": "Mourad provided an exceptional luxury chauffeur service. The vehicle was spotless and comfortable, and his driving was both smooth and professional."
   },
+  "Alert": {
+    "error_complete_fields": "Please complete all fields",
+    "error_less_150_characters": "Your review must be less than 150 characters",
+    "success_posted": "Your review has been posted",
+    "error_server": "An error has occurred"
+  },
   "Nav": {
     "home": "Home",
     "services": "Services",

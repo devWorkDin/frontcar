@@ -192,9 +192,10 @@ function Nav() {
                     window.location.replace(newPath);
                   }}
                 >
-                  <option value="choose">{b("choose")}</option>
-                  <option value="fr">FR</option>
-                  <option value="en">EN</option>
+                  {/* <option value="choose">{b("choose")}</option> */}
+                  <option className="globe-select" value="choose">🌐</option>
+                  <option value="fr">FR 🇫🇷</option>
+                  <option value="en">EN 🇺🇸</option>
                 </select>
               </li>
             </ul>

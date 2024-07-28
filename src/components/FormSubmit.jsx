@@ -6,11 +6,13 @@ import "../styles/RateWithStars.css";
 import { useState } from "react";
 import "../styles/FormSubmit.css";
 import RateWithStars from "./RateWithStars";
+import { useTranslations } from "next-intl";
 import Toastify from "toastify-js";
 
-import { useTranslations } from "next-intl";
 
 function FormSubmit({ confort, professionnalisme, ponctualite, proprete }) {
+
+  const x = useTranslations("Alert");
   const w = useTranslations("WriteTestimonial");
   const v = useTranslations("Basics");
 
@@ -22,7 +24,7 @@ function FormSubmit({ confort, professionnalisme, ponctualite, proprete }) {
     setIsLoading(true);
     if (username === "" || content === "") {
       Toastify({
-        text: "Veuillez remplir tous les champs",
+        text:x("error_complete_fields"),
         close: true,
         position: "center",
         gravity: "bottom", // `top` or `bottom`
@@ -34,7 +36,7 @@ function FormSubmit({ confort, professionnalisme, ponctualite, proprete }) {
     }
     if (content.length > 150) {
       Toastify({
-        text: "Votre avis doit faire moins de 100 caractères",
+        text:x("error_less_150_characters"),
         close: true,
         position: "center",
         gravity: "bottom", // `top` or `bottom`
@@ -77,7 +79,7 @@ function FormSubmit({ confort, professionnalisme, ponctualite, proprete }) {
           setContent("");
 
           Toastify({
-            text: "Votre avis a été publié",
+            text:x("success_posted"),
             close: true,
             position: "center",
             gravity: "bottom", // `top` or `bottom`
@@ -86,7 +88,8 @@ function FormSubmit({ confort, professionnalisme, ponctualite, proprete }) {
           }).showToast();
         } else {
           Toastify({
-            text: "Une erreur est survenue",
+            
+            text: x("error_server"),
             close: true,
             position: "center",
             gravity: "bottom", // `top` or `bottom`
@@ -99,7 +102,7 @@ function FormSubmit({ confort, professionnalisme, ponctualite, proprete }) {
       .catch((error) => {
         setIsLoading(false);
         Toastify({
-          text: "Une erreur est survenue",
+          text: x("error_server"),
           close: true,
           position: "center",
           gravity: "bottom", // `top` or `bottom`

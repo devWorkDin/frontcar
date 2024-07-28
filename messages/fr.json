@@ -1,0 +1,71 @@
+{
+  "Homepage": {
+    "luxury_trips": "Des trajets de luxe pour vos événements",
+    "premium_transport_service": "Profitez d'un service de transport haut de gamme pour vos déplacements à Paris et ses environs.",
+    "book_now": "Réservez dès maintenant",
+    "comfort_and_luxury_on_board": "Confort et Luxe à Bord",
+    "luxury_features": "Profitez de sièges en cuir, climatisation ajustable, éclairage d'ambiance, boissons rafraîchissantes et collations gourmet.",
+    "airport_paris_trips": "Trajets Aéroport-Paris",
+    "airport_service_description": "Profitez d'un service de chauffeur privé de luxe pour vos trajets entre les aéroports et Paris.",
+    "event_services": "Services Événementiels",
+    "event_service_description": "Faites de votre événement une occasion spéciale avec notre service de transport événementiel.",
+    "card_payment_available": "Paiement par carte disponible",
+    "payment_description": "Profitez d'un transport pour vos occasions spéciales sans souci avec la possibilité de payer en espèces ou par carte, selon vos préférences.",
+    "book_on_whatsapp": "Réserver sur WhatsApp",
+    "whatsapp_contact": "Contactez nous via WhatsApp afin de programmer votre trajet",
+    "instant_confirmation": "Confirmation Instantanée",
+    "confirmation_details": "Recevez une confirmation de votre réservation avec tous les détails de votre trajet.",
+    "personalized_service": "Service Personnalisé",
+    "personalized_service_description": "Profitez d'un service personnalisé et de qualité pour tous vos déplacements.",
+    "see_all_testimonials": "Voir tous les témoignages",
+    "testimonial_example": "Mourad a offert un service de chauffeur de luxe exceptionnel. Le véhicule était impeccable et confortable, de plus sa  conduite était à la fois douce et professionnelle."
+  },
+  "Nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "procedure": "Procédure",
+    "testimonial": "Témoignage",
+    "contact_me": "Contactez-moi",
+    "card_payment": "Paiement par carte disponible"
+  },
+  "Footer": {
+    "dont_waste_time": "Ne perdez plus votre temps?",
+    "order_driver_now": "Commandez votre chauffeur dès maintenant!"
+  },
+
+  "TestimonialPage": {
+    "here_are_all_testimonials": "Voici tous les témoignages",
+    "you_can_consult_them": "Vous pouvez les consulter et vous faire votre propre opinion !",
+    "write_a_testimonial": "Écrire un témoignage",
+    "more_than_trips": "Plus de 92 trajets",
+    "service": {
+      "professionalism": "Professionnalisme",
+      "comfort": "Confort",
+      "punctuality": "Ponctualité",
+      "cleanliness": "Propreté du véhicule"
+    },
+    "sort_filter_by": {
+      "most_recent": "Les Plus Récents",
+      "least_recent": "Les Moins Récents",
+      "best_rated": "Les Mieux Notés",
+      "worst_rated": "Les Moins Notés",
+      "sort_filter_by": "Trier/Filtrer par :"
+    }
+  },
+  "Basics":{
+    "choose": "Choisir",
+    "loading": "Chargement...",
+    "no_testimonials": "Aucun témoignage disponible"
+  },
+  "WriteTestimonial":{
+    "what_did_you_think": "Que pensez-vous de notre service ?",
+    "choose_the_criteria": "Choisissez les critères qui définissent le mieux votre expérience",
+    "note_write_and_post": "Notez, écrivez et postez",
+    "mark_your_driver": "Notez votre chauffeur",
+    "your_name": "Nom complet",
+    "placeholder_name": "Insérer votre nom complet",
+    "give_your_comment": "Donnez votre avis",  
+    "placeholder_comment": "Insérer votre avis",
+    "publish": "Publier votre commentaire"
+  }
+}

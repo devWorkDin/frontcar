@@ -1,0 +1,70 @@
+{
+  "Homepage": {
+    "luxury_trips": "Luxury Trips for Your Events",
+    "premium_transport_service": "Enjoy premium transportation service for your trips in and around Paris.",
+    "book_now": "Book Now",
+    "comfort_and_luxury_on_board": "Comfort and Luxury on Board",
+    "luxury_features": "Enjoy leather seats, adjustable air conditioning, ambient lighting, refreshing drinks, and gourmet snacks.",
+    "airport_paris_trips": "Airport-Paris Trips",
+    "airport_service_description": "Enjoy a luxury private chauffeur service for your trips between airports and Paris.",
+    "event_services": "Event Services",
+    "event_service_description": "Make your event a special occasion with our event transportation service.",
+    "card_payment_available": "Card Payment Available",
+    "payment_description": "Enjoy transportation for your special occasions without worry with the option to pay in cash or by card, according to your preferences.",
+    "book_on_whatsapp": "Book on WhatsApp",
+    "whatsapp_contact": "Contact us via WhatsApp to schedule your trip",
+    "instant_confirmation": "Instant Confirmation",
+    "confirmation_details": "Receive a confirmation of your booking with all the trip details.",
+    "personalized_service": "Personalized Service",
+    "personalized_service_description": "Enjoy personalized and quality service for all your trips.",
+    "see_all_testimonials": "See All Testimonials",
+    "testimonial_example": "Mourad provided an exceptional luxury chauffeur service. The vehicle was spotless and comfortable, and his driving was both smooth and professional."
+  },
+  "Nav": {
+    "home": "Home",
+    "services": "Services",
+    "procedure": "Procedure",
+    "testimonial": "Testimonial",
+    "contact_me": "Contact Me",
+    "card_payment": "Card Payment Available"
+  },
+  "Footer": {
+    "dont_waste_time": "Don't Waste Your Time?",
+    "order_driver_now": "Order Your Driver Now!"
+  },
+  "TestimonialPage": {
+    "here_are_all_testimonials": "Here are all the testimonials",
+    "you_can_consult_them": "You can consult them and make your own opinions!",
+    "write_a_testimonial": "Write a testimonial",
+    "more_than_trips": "More than 92 trips",
+    "service": {
+      "professionalism": "Professionalism",
+      "comfort": "Comfort",
+      "punctuality": "Punctuality",
+      "cleanliness": "Vehicle Cleanliness"
+    },
+    "sort_filter_by": {
+      "most_recent": "Most Recent",
+      "least_recent": "Least Recent",
+      "best_rated": "Best Rated",
+      "worst_rated": "Worst Rated",
+      "sort_filter_by": "Sort/Filter by:"
+    }
+  },
+  "Basics": {
+    "choose": "Choose",
+    "loading": "Loading...",
+    "no_testimonials": "Pas encore de témoignages"
+  },
+  "WriteTestimonial": {
+    "what_did_you_think": "What did you think of our service?",
+    "choose_the_criteria": "Choose the criteria that best define your experience",
+    "note_write_and_post": "Rate, write, and post",
+    "mark_your_driver": "Rate your driver",
+    "your_name": "Full name",
+    "placeholder_name": "Enter your full name",
+    "give_your_comment": "Give your feedback",
+    "placeholder_comment": "Enter your feedback",
+    "publish": "Publish your comment"
+  }
+}

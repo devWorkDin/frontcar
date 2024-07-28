@@ -19,6 +19,7 @@
     "lottie-react": "^2.4.0",
     "mongoose": "^8.5.1",
     "next": "14.2.5",
+    "next-intl": "^3.17.2",
     "react": "^18",
     "react-awesome-reveal": "^4.2.12",
     "react-dom": "^18",

@@ -14,7 +14,7 @@ function Footer() {
     <>
       <footer
         id="contactez-nous"
-        className="pt-0 xl:mt-32 mx-auto w-full relative text-center bg-black text-white"
+        className="pt-0 mx-auto w-full relative text-center bg-black text-white"
         style={{
           backgroundColor: "black",
         }}

@@ -1,7 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import AllTestimonial from "../../../components/AllTestimonial";
-import ProfilDriver from "../../../components/ProfilDriver";
+import React, { useState } from "react";
 import "../../../styles/WriteTestimonial.css";
 import "../../../styles/AllTestimonial.css";
 import { useTranslations } from "next-intl";

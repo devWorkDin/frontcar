@@ -5,9 +5,9 @@ import { useEffect } from "react";
 import "toastify-js/src/toastify.css";
 import { useTranslations } from "next-intl";
 import Toastify from "toastify-js";
-import "../../styles/Dashboard.css";
-import AllTestimonialDashboard from "../../components/AllTestimonialDashboard";
-import "../../styles/WriteTestimonial.css";
+import "../../../styles/Dashboard.css";
+import AllTestimonialDashboard from "../../../components/AllTestimonialDashboard";
+import "../../../styles/WriteTestimonial.css";
 
 function Page() {
 

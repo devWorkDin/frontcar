@@ -11,7 +11,7 @@ function Process() {
         <div className="grid-process-item">
           <div className="frame first">
             <Image
-              src="./assets/svg/whatsapp.svg"
+              src="/assets/svg/whatsapp.svg"
               alt="whatsapp"
               width={32}
               height={32}
@@ -25,7 +25,7 @@ function Process() {
         <div className="grid-process-item second">
           <div className="frame second">
             <Image
-              src="./assets/svg/notification.svg"
+              src="/assets/svg/notification.svg"
               alt="whatsapp"
               width={32}
               height={32}
@@ -39,7 +39,7 @@ function Process() {
         <div className="grid-process-item third">
           <div className="frame last">
             <Image
-              src="./assets/svg/user-focus.svg"
+              src="/assets/svg/user-focus.svg"
               alt="whatsapp"
               width={32}
               height={32}

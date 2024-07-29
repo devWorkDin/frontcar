@@ -43,7 +43,7 @@ function Testimonial() {
                   }}
                 >
                   <Image
-                    src={"./assets/svg/steering-wheel.svg"}
+                    src={"/assets/svg/steering-wheel.svg"}
                     alt="temoignage"
                     width={32}
                     height={32}

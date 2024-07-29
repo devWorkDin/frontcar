@@ -45,7 +45,7 @@ export default async function LocaleLayout({
             backgroundColor: "black",
           }}
         >
-          <Nav />
+          <Nav locale={locale} />
 
           {children}
           <Footer />

@@ -12,6 +12,21 @@ import Toastify from "toastify-js";
 
 function FormSubmit({ confort, professionnalisme, ponctualite, proprete }) {
 
+  const sendEmail = (e) => {
+    fetch("/api/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    
+    })
+      .then((response) => {
+        console.log(response)
+        
+      })
+    }
+
+
   const x = useTranslations("Alert");
   const w = useTranslations("WriteTestimonial");
   const v = useTranslations("Basics");
@@ -78,6 +93,8 @@ function FormSubmit({ confort, professionnalisme, ponctualite, proprete }) {
           setUsername("");
           setContent("");
 
+
+
           Toastify({
             text:x("success_posted"),
             close: true,
@@ -127,6 +144,9 @@ function FormSubmit({ confort, professionnalisme, ponctualite, proprete }) {
   });
   return (
     <div className="form-submit">
+      {/* <button onClick={()=>{
+        sendEmail()
+      }}>SEND EMAIL</button> */}
       <label htmlFor="note">{w("mark_your_driver")}</label>
       <RateWithStars onRatingChange={handleRatingChange} />
       <label htmlFor="fullname">{w("your_name")}</label>

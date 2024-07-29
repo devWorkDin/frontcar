@@ -30,7 +30,6 @@ function Grid1({ title, content, image, direction }) {
           <h1>{title}</h1>
           <p>{content}</p>
           <a href='https://api.whatsapp.com/send/?phone=33786740798&text&type=phone_number&app_absent=0'>
-
           {t('book_now')}
           </a>
         </div>

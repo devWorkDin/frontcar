@@ -18,15 +18,17 @@ export function EmailTemplate({
   professionnalisme,
 }) {
   return (
+    
     <div>
       <h1>Vous avez un nouveau témoignage !</h1>
       <h2>De la part de : {username}</h2>
       <h3>Note : {rating}</h3>
-      <p>Contenu : {content}</p>
+      <h3>Contenu : {content}</h3>
       <h3>Confort : {confort ? "Oui" : "Non"}</h3>
       <h3>Professionnalisme : {professionnalisme ? "Oui" : "Non"}</h3>
       <h3>Ponctualité : {ponctualite ? "Oui" : "Non"}</h3>
       <h3>Propreté : {proprete ? "Oui" : "Non"}</h3>
     </div>
+    
   );
 }

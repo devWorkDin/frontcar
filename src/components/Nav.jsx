@@ -236,9 +236,16 @@ function Nav({ locale }) {
                 onChange={(e) => {
                   const pathSegments = pathname.split("/").filter(Boolean);
                   localStorage.setItem("locale", e.target.value);
-                  window.location.replace(
-                    `/${e.target.value}/${pathSegments[1]}`
-                  );
+                  if(pathSegments[1]){
+                    window.location.replace(
+                      `/${e.target.value}/${pathSegments[1]}`
+                    );
+                  }else{
+                    window.location.replace(
+                      `/${e.target.value}`
+                    );
+                  }
+                  
                 }}
               >
                 <option className="globe-select" value="choose">

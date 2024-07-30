@@ -12,16 +12,25 @@ import Toastify from "toastify-js";
 
 function FormSubmit({ confort, professionnalisme, ponctualite, proprete }) {
 
-  const sendEmail = (e) => {
+  const sendEmail = () => {
+
     fetch("/api/send", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
+      body: JSON.stringify({
+        username,
+        content,
+        rating,
+        ponctualite,
+        professionnalisme,
+        proprete,
+        confort,
+      }),
     
     })
       .then((response) => {
-        console.log(response)
         
       })
     }
@@ -87,6 +96,7 @@ function FormSubmit({ confort, professionnalisme, ponctualite, proprete }) {
       .then((data) => {
         setIsLoading(false);
         if (data.result) {
+          sendEmail()
           setTimeout(() => {
             window.location.reload();
           }, 2000);
@@ -114,7 +124,6 @@ function FormSubmit({ confort, professionnalisme, ponctualite, proprete }) {
             backgroundColor: "red",
           }).showToast();
         }
-        console.log(data);
       })
       .catch((error) => {
         setIsLoading(false);
@@ -144,9 +153,6 @@ function FormSubmit({ confort, professionnalisme, ponctualite, proprete }) {
   });
   return (
     <div className="form-submit">
-      {/* <button onClick={()=>{
-        sendEmail()
-      }}>SEND EMAIL</button> */}
       <label htmlFor="note">{w("mark_your_driver")}</label>
       <RateWithStars onRatingChange={handleRatingChange} />
       <label htmlFor="fullname">{w("your_name")}</label>

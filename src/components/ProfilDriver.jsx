@@ -67,7 +67,10 @@ function ProfilDriver() {
   return (
     <section className="profil-driver-section">
       <div className="profil-driver-container">
-        <div className="profil-driver-image"></div>
+        <div className="profil-driver-image">
+
+          <img src="/assets/logo/1.png" alt="profil driver" />
+        </div>
         <ul className="profil-driver-list">
           <li>Mourad Meremi</li>
           <li>

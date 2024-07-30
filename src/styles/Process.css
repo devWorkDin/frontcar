@@ -1,5 +1,7 @@
 .grid-process {
   display: flex;
+  scroll-margin-top: 160px; /* Ajustez cette valeur en fonction de la hauteur de votre barre de navigation */
+
   background-color: black;
   max-width: 80rem;
   justify-content: space-around;

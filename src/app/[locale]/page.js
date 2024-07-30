@@ -27,31 +27,38 @@ export default function Home() {
       <Zoom>
         <HeroSection />
       </Zoom>
+      <section id="services" className="idServicesScroll" 
+      style={{
+        scrollMarginTop: "10rem",
 
-      <Grid1
-        direction={"no-reverse"}
-        title={`${t("comfort_and_luxury_on_board")}`}
-        content={`${t("luxury_features")}`}
-        image={"/assets/3.jpg"}
-      />
-      <Grid1
-        direction={"reverse"}
-        title={`${t("airport_paris_trips")}`}
-        content={`${t("airport_service_description")}`}
-        image={"/assets/1.jpg"}
-      />
-      <Grid1
-        direction={"no-reverse"}
-        title={`${t("event_services")}`}
-        content={`${t("event_service_description")}`}
-        image={"/assets/2.jpg"}
-      />
-      <Grid1
-        direction={"reverse"}
-        title={`${t("card_payment_available")}`}
-        content={`${t("payment_description")}`}
-        image={"/assets/4.jpg"}
-      />
+      }}
+      >
+        <Grid1
+          direction={"no-reverse"}
+          title={`${t("comfort_and_luxury_on_board")}`}
+          content={`${t("luxury_features")}`}
+          image={"/assets/3.jpg"}
+        />
+        <Grid1
+          direction={"reverse"}
+          title={`${t("airport_paris_trips")}`}
+          content={`${t("airport_service_description")}`}
+          image={"/assets/1.jpg"}
+        />
+        <Grid1
+          direction={"no-reverse"}
+          title={`${t("event_services")}`}
+          content={`${t("event_service_description")}`}
+          image={"/assets/2.jpg"}
+        />
+        <Grid1
+          direction={"reverse"}
+          title={`${t("card_payment_available")}`}
+          content={`${t("payment_description")}`}
+          image={"/assets/4.jpg"}
+        />
+      </section>
+
       <Process />
       <Testimonial />
     </main>

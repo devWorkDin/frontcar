@@ -14,7 +14,6 @@ function Grid1({ title, content, image, direction }) {
   };
   return (
     <div
-      id="services"
       className="container-grid"
       style={
         direction === "reverse"

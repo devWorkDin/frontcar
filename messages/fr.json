@@ -51,6 +51,7 @@
       "cleanliness": "Propreté du véhicule"
     },
     "sort_filter_by": {
+      "choose_your_sort": "Choisissez votre tri",
       "most_recent": "Les Plus Récents",
       "least_recent": "Les Moins Récents",
       "best_rated": "Les Mieux Notés",

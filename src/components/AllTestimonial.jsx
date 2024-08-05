@@ -83,6 +83,7 @@ function AllTestimonial() {
       <div className="filter-cliquer">
         <h2>{u("sort_filter_by")}</h2>
         <select className="select-filter" name="Filtrer" id="filter" onChange={handleSortChange}>
+          <option value="date">{u("choose_your_sort")}</option>
           <option value="datenew">{u("most_recent")}</option>
           <option value="dateold">{u("least_recent")}</option>
           <option value="ratingbest">{u("best_rated")}</option>

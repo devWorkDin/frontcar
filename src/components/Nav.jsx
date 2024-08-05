@@ -8,6 +8,8 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 function Nav({ locale }) {
+  const currentLocale = locale || 'fr'; // Valeur par défaut 'en' pour l'anglais
+
   const pathname = usePathname();
   const b = useTranslations("Basics");
   const t = useTranslations("Nav");
@@ -56,7 +58,7 @@ function Nav({ locale }) {
       <nav className="bg-black border-gray-200 fixed w-[100%] z-40 top-10 left-0 right-0">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link
-            href={`/${locale}`}
+            href={`/${currentLocale}`}
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img className="logoPng" src={"/assets/logo/2.png"} alt="logo" />
@@ -116,7 +118,7 @@ function Nav({ locale }) {
             <ul className="items-center font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  dark:border-gray-700">
               <li>
                 <Link
-                  href={`/${locale}`}
+                  href={`/${currentLocale}`}
                   className="block py-2 px-3 text-white rounded md:bg-transparent  md:p-0 dark:text-white"
                   aria-current="page"
                 >
@@ -125,7 +127,7 @@ function Nav({ locale }) {
               </li>
               <li>
                 <Link
-                  href={`/${locale}#services`}
+                  href={`/${currentLocale}#services`}
                   className="block py-2 px-3 text-white rounded md:bg-transparent  md:p-0 dark:text-white"
                   aria-current="page"
                 >
@@ -134,7 +136,7 @@ function Nav({ locale }) {
               </li>
               <li>
                 <Link
-                  href={`/${locale}#procedure`}
+                  href={`/${currentLocale}#procedure`}
                   className="block py-2 px-3 text-white rounded md:bg-transparent  md:p-0 dark:text-white"
                   aria-current="page"
                 >
@@ -143,7 +145,7 @@ function Nav({ locale }) {
               </li>
               <li>
                 <Link
-                  href={`/${locale}/temoignages`}
+                  href={`/${currentLocale}/temoignages`}
                   className="block py-2 px-3 text-white rounded md:bg-transparent  md:p-0 dark:text-white"
                   aria-current="page"
                 >

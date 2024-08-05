@@ -27,7 +27,6 @@ function ProfilDriver() {
       .then((response) => response.json())
       .then((data) => {
         setServices(data.services);
-        console.log(data.services);
         setIsLoading(false);
       });
   }, []);

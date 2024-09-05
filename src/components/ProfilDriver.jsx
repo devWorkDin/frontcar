@@ -5,31 +5,14 @@ import StarsRating from "./StarsRating";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { useEffect } from "react";
-function ProfilDriver() {
+function ProfilDriver({ ratingss, servicess }) {
   const t = useTranslations("Basics");
   const u = useTranslations("TestimonialPage");
   const v = useTranslations("TestimonialPage.service");
-  const [services, setServices] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [ratingAverage, setRatingAverage] = useState(0);
+  const [services, setServices] = useState(servicess);
+  const [isLoading, setIsLoading] = useState(false);
+  const [ratingAverage, setRatingAverage] = useState(ratingss);
   const [rating, setRating] = useState(0);
-
-  useEffect(() => {
-    setIsLoading(true);
-
-    fetch("/api/rating")
-      .then((response) => response.json())
-      .then((data) => {
-        setRatingAverage(data.rating);
-      });
-
-    fetch("/api/service")
-      .then((response) => response.json())
-      .then((data) => {
-        setServices(data.services);
-        setIsLoading(false);
-      });
-  }, []);
 
   const qualityCount = {
     ponctualite: 0,
@@ -67,7 +50,6 @@ function ProfilDriver() {
     <section className="profil-driver-section">
       <div className="profil-driver-container">
         <div className="profil-driver-image">
-
           <img src="/assets/logo/1.png" alt="profil driver" />
         </div>
         <ul className="profil-driver-list">

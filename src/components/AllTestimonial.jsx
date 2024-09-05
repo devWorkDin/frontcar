@@ -6,55 +6,19 @@ import Toastify from "toastify-js";
 import { GetServerSideProps } from "next";
 import "../styles/AllTestimonial.css";
 
-// export async function getServerSideProps() {
-//   const response = await fetch("https://www.agence-fastcar.fr/api/testimonial", {
-//     method: "GET",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//   });
-
-//   const data = await response.json();
-
-//   return {
-//     props: {
-//       testimonials: data?.testimonials || [],
-//     },
-//   };
-// }
-
-export async function getTestimonials() {
-  const response = await fetch("https://www.agence-fastcar.fr/api/testimonial");
-
-  if (!response.ok) {
-    throw new Error('Network response was not ok');
-  }
-
-  return response.json();
-}
-
-
-
-function AllTestimonial() {
+export default function AllTestimonial({ testimonialss }) {
+  console.log(testimonialss);
   const u = useTranslations("TestimonialPage.sort_filter_by");
   const v = useTranslations("Basics");
 
   const [sortCriteria, setSortCriteria] = useState("date");
-  const [loading, setLoading] = useState(true);
-  const [testimonials, setTestimonials] = useState([]);
+  const [loading, setLoading] = useState(false);
   const [sortedTestimonials, setSortedTestimonials] = useState([]);
+  const [testimonials, setTestimonials] = useState([]);
 
   useEffect(() => {
-    setLoading(true);
-
-    getTestimonials().then((data) => {
-      setLoading(false);
-      setTestimonials(data?.testimonials || []);
-      sortTestimonials(sortCriteria, data?.testimonials || []);
-    }).catch((error) => {
-      setLoading(false);
-      console.error('There has been a problem with your fetch operation:', error);
-    });
+    setTestimonials(testimonialss);
+    sortTestimonials(sortCriteria, testimonialss);
 
     // setLoading(true);
 
@@ -97,7 +61,7 @@ function AllTestimonial() {
   }, [sortCriteria, testimonials]);
 
   const sortTestimonials = (criteria, testimonials) => {
-    let sortedTestimonials = [...testimonials];
+    let sortedTestimonials = [...testimonials]||[];
     switch (criteria) {
       case "datenew":
         sortedTestimonials.sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -170,5 +134,3 @@ function AllTestimonial() {
     </>
   );
 }
-
-export default AllTestimonial;

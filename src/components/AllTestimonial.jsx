@@ -5,20 +5,37 @@ import { useTranslations } from "next-intl";
 import Toastify from 'toastify-js';
 import "../styles/AllTestimonial.css";
 
-export async function getTestimonials () {
-  const response = await fetch("/api/testimonial", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+// export async function getServerSideProps() {
+//   const response = await fetch("https://www.agence-fastcar.fr/api/testimonial", {
+//     method: "GET",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//   });
+
+//   const data = await response.json();
+  
+//   return {
+//     props: {
+//       testimonials: data?.testimonials || [],
+//     },
+//   };
+// }
+
+export async function getTestimonials() {
+  const response = await fetch("https://www.agence-fastcar.fr/api/testimonial");
+
   if (!response.ok) {
     throw new Error('Network response was not ok');
   }
+
   return response.json();
 }
 
+
 function AllTestimonial() {
+  const testimonial =  getTestimonials();
+  console.log(testimonial);
   const u = useTranslations("TestimonialPage.sort_filter_by");
   const v = useTranslations("Basics");
   
@@ -29,6 +46,7 @@ function AllTestimonial() {
 
   useEffect(() => {
     setLoading(true); 
+    
     getTestimonials().then((data) => {
       setLoading(false);
       setTestimonials(data?.testimonials || []);

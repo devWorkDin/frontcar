@@ -4,21 +4,25 @@ import Testimonial from "../../../../models/testimonials";
 import Service from "../../../../models/services";
 
 export async function GET(request) {
+  // Connexion à la base de données
   await connectToDB();
 
-  // return NextResponse.json({ message: "Hello World" });
+  // Récupérer les témoignages actifs depuis la base de données
+  const testimonials = await Testimonial.find({ active: true });
 
-  const testimonials = await Testimonial.find({
-    active: true,
+  // Préparer la réponse avec les en-têtes CORS
+  const response = NextResponse.json({
+    message: testimonials.length === 0 ? "Pas encore de témoignages" : "Témoignages trouvés",
+    testimonials,
   });
-  if (testimonials.length == 0)
-    return NextResponse.json({
-      message: "Pas encore de témoignages",
-      testimonials,
-    });
-  return NextResponse.json({ message: "Hello World", testimonials });
-}
 
+  // Ajouter l'en-tête CORS à la réponse
+  response.headers.set('Access-Control-Allow-Origin', '*');
+  response.headers.set('Access-Control-Allow-Methods', 'GET');
+  response.headers.set('Access-Control-Allow-Headers', 'Content-Type');
+
+  return response;
+}
 export async function POST(request) {
   // return NextResponse.json({ message: "Hello World" });
 

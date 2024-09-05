@@ -5,63 +5,116 @@ import { useTranslations } from "next-intl";
 import Toastify from "toastify-js";
 import { GetServerSideProps } from "next";
 import "../styles/AllTestimonial.css";
-// pages/testimonials.js (ou le nom de votre fichier de page)
 
-export async function getServerSideProps() {
-  try {
-    const response = await fetch("https://www.agence-fastcar.fr/api/testimonial");
-    
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    
-    const data = await response.json();
-    return {
-      props: {
-        testimonials: data?.testimonials || [],
-      },
-    };
-  } catch (error) {
-    console.error('Error fetching testimonials:', error);
-    return {
-      props: {
-        testimonials: [],
-      },
-    };
+// export async function getServerSideProps() {
+//   const response = await fetch("https://www.agence-fastcar.fr/api/testimonial", {
+//     method: "GET",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//   });
+
+//   const data = await response.json();
+
+//   return {
+//     props: {
+//       testimonials: data?.testimonials || [],
+//     },
+//   };
+// }
+
+export async function getTestimonials() {
+  const response = await fetch("https://www.agence-fastcar.fr/api/testimonial");
+
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
   }
+
+  return response.json();
 }
 
-function AllTestimonial({ testimonials }) {
+
+
+function AllTestimonial() {
   const u = useTranslations("TestimonialPage.sort_filter_by");
   const v = useTranslations("Basics");
 
   const [sortCriteria, setSortCriteria] = useState("date");
-  const [sortedTestimonials, setSortedTestimonials] = useState(testimonials);
+  const [loading, setLoading] = useState(true);
+  const [testimonials, setTestimonials] = useState([]);
+  const [sortedTestimonials, setSortedTestimonials] = useState([]);
 
   useEffect(() => {
+    setLoading(true);
+
+    getTestimonials().then((data) => {
+      setLoading(false);
+      setTestimonials(data?.testimonials || []);
+      sortTestimonials(sortCriteria, data?.testimonials || []);
+    }).catch((error) => {
+      setLoading(false);
+      console.error('There has been a problem with your fetch operation:', error);
+    });
+
+    // setLoading(true);
+
+    // fetch("/api/testimonial", {
+    //   method: "GET",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // })
+    //   .then((response) => {
+    //     if (!response.ok) {
+    //       Toastify({
+    //         text: "Erreur réseau",
+    //         close: true,
+    //         position: "center",
+    //         gravity: "bottom",
+    //         duration: 3000,
+    //         backgroundColor: "red",
+    //       }).showToast();
+    //       setLoading(false);
+    //       throw new Error('Network response was not ok');
+    //     }
+    //     return response.json();
+    //   })
+    //   .then((data) => {
+    //     setLoading(false);
+    //     setTestimonials(data?.testimonials || []);
+    //     sortTestimonials(sortCriteria, data?.testimonials || []);
+    //   })
+    //   .catch((error) => {
+    //     setLoading(false);
+    //     console.error('There has been a problem with your fetch operation:', error);
+    //   });
+  }, []);
+
+  useEffect(() => {
+    // setLoading(true)
+
     sortTestimonials(sortCriteria, testimonials);
   }, [sortCriteria, testimonials]);
 
-  const sortTestimonials = (criteria, testimonialsToSort) => {
-    let sorted = [...(testimonialsToSort || [])];
-    console.log(sorted);
+  const sortTestimonials = (criteria, testimonials) => {
+    let sortedTestimonials = [...testimonials];
     switch (criteria) {
       case "datenew":
-        sorted.sort((a, b) => new Date(b.date) - new Date(a.date));
+        sortedTestimonials.sort((a, b) => new Date(b.date) - new Date(a.date));
         break;
       case "dateold":
-        sorted.sort((a, b) => new Date(a.date) - new Date(b.date));
+        sortedTestimonials.sort((a, b) => new Date(a.date) - new Date(b.date));
         break;
       case "ratingbest":
-        sorted.sort((a, b) => b.rating - a.rating);
+        sortedTestimonials.sort((a, b) => b.rating - a.rating);
         break;
       case "ratingworst":
-        sorted.sort((a, b) => a.rating - b.rating);
+        sortedTestimonials.sort((a, b) => a.rating - b.rating);
         break;
       default:
         break;
     }
-    setSortedTestimonials(sorted);
+    setSortedTestimonials(sortedTestimonials);
   };
 
   const handleSortChange = (e) => {
@@ -86,7 +139,18 @@ function AllTestimonial({ testimonials }) {
         </select>
       </div>
       <section className="section-testimonial">
-        {sortedTestimonials?.length === 0 ? (
+        {loading ? (
+          <h1
+            style={{
+              textAlign: "center",
+              margin: "auto",
+              fontSize: "1.5rem",
+              color: "white",
+            }}
+          >
+            {v("loading")}
+          </h1>
+        ) : sortedTestimonials.length === 0 ? (
           <h1
             style={{
               textAlign: "center",
@@ -98,9 +162,9 @@ function AllTestimonial({ testimonials }) {
             {v("no_testimonials")}
           </h1>
         ) : (
-          sortedTestimonials?.map((testi) => (
-            <TestimonialCard key={testi._id} testimonial={testi} />
-          ))
+          sortedTestimonials.map((testi) => {
+            return <TestimonialCard key={testi._id} testimonial={testi} />;
+          })
         )}
       </section>
     </>

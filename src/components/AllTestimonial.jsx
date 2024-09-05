@@ -5,51 +5,76 @@ import { useTranslations } from "next-intl";
 import Toastify from 'toastify-js';
 import "../styles/AllTestimonial.css";
 
+export async function getTestimonials () {
+  const response = await fetch("/api/testimonial", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
+  }
+  return response.json();
+}
+
 function AllTestimonial() {
   const u = useTranslations("TestimonialPage.sort_filter_by");
   const v = useTranslations("Basics");
   
   const [sortCriteria, setSortCriteria] = useState("date");
   const [loading, setLoading] = useState(true);
-  const [testimonials, setTestimonials] = useState([]);
+  const [testimonials, setTestimonials] = useState([  ]);
   const [sortedTestimonials, setSortedTestimonials] = useState([]);
 
   useEffect(() => {
-    setLoading(true);
+    setLoading(true); 
+    getTestimonials().then((data) => {
+      setLoading(false);
+      setTestimonials(data?.testimonials || []);
+      sortTestimonials(sortCriteria, data?.testimonials || []);
+    }).catch((error) => {
+      setLoading(false);
+      console.error('There has been a problem with your fetch operation:', error);
+    });
+    
+    // setLoading(true);
 
-    fetch("/api/testimonial", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => {
-        if (!response.ok) {
-          Toastify({
-            text: "Erreur réseau",
-            close: true,
-            position: "center",
-            gravity: "bottom",
-            duration: 3000,
-            backgroundColor: "red",
-          }).showToast();
-          setLoading(false);
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setLoading(false);
-        setTestimonials(data?.testimonials || []);
-        sortTestimonials(sortCriteria, data?.testimonials || []);
-      })
-      .catch((error) => {
-        setLoading(false);
-        console.error('There has been a problem with your fetch operation:', error);
-      });
+    // fetch("/api/testimonial", {
+    //   method: "GET",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // })
+    //   .then((response) => {
+    //     if (!response.ok) {
+    //       Toastify({
+    //         text: "Erreur réseau",
+    //         close: true,
+    //         position: "center",
+    //         gravity: "bottom",
+    //         duration: 3000,
+    //         backgroundColor: "red",
+    //       }).showToast();
+    //       setLoading(false);
+    //       throw new Error('Network response was not ok');
+    //     }
+    //     return response.json();
+    //   })
+    //   .then((data) => {
+    //     setLoading(false);
+    //     setTestimonials(data?.testimonials || []);
+    //     sortTestimonials(sortCriteria, data?.testimonials || []);
+    //   })
+    //   .catch((error) => {
+    //     setLoading(false);
+    //     console.error('There has been a problem with your fetch operation:', error);
+    //   });
   }, []);
 
   useEffect(() => {
+    // setLoading(true)
+   
     sortTestimonials(sortCriteria, testimonials);
   }, [sortCriteria, testimonials]);
 

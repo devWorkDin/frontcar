@@ -33,7 +33,7 @@ function Grid1({ title, content, image, direction }) {
           </a>
         </div>
         <div className="grid-image">
-          <img src={image} alt="grid" />
+          <img src={image} alt="grid v2" />
           <div className="overlay_blur"></div>
         </div>
       </Reveal>

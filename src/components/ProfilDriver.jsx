@@ -4,7 +4,6 @@ import "../styles/ProfilDriver.css";
 import StarsRating from "./StarsRating";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { useEffect } from "react";
 function ProfilDriver({ ratingss, servicess }) {
   const t = useTranslations("Basics");
   const u = useTranslations("TestimonialPage");

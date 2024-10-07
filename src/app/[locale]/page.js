@@ -27,11 +27,12 @@ export default function Home() {
       <Zoom>
         <HeroSection />
       </Zoom>
-      <section id="services" className="idServicesScroll" 
-      style={{
-        scrollMarginTop: "10rem",
-
-      }}
+      <section
+        id="services"
+        className="idServicesScroll"
+        style={{
+          scrollMarginTop: "10rem",
+        }}
       >
         <Grid1
           direction={"no-reverse"}

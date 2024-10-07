@@ -26,7 +26,7 @@ function Testimonial() {
               </svg>
               <blockquote>
                 <p className="text-2xl font-medium text-white">
-                 {t("testimonial_example")}
+                  {t("testimonial_example")}
                 </p>
               </blockquote>
               <figcaption className="flex items-center justify-center mt-6 space-x-3">
@@ -55,8 +55,9 @@ function Testimonial() {
               </figcaption>
             </figure>
             <Link
-              href={`/${locale}/temoignages`}
-
+              href={
+                locale == null ? `/fr/temoignages` : `/${locale}/temoignages`
+              }
               style={{
                 padding: "1rem",
                 borderRadius: "3rem",
